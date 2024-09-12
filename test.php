@@ -18,31 +18,12 @@ $serv->set([
 // 监听 HTTP 请求
 $serv->on('request', function (Swoole\Http\Request $request, Swoole\Http\Response $response) {
     go(function () use ($request, $response) { // 使用 go 函数启动一个协程
-
         $testI = 0;
         while ($testI < 10000) {
             go(function () use ($request, $response, &$testI) {
                 $testI++;
                 $testI++;
                 $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $response->write("test1111: $testI\n");
-//                $response->flush();
-//                usleep(1000);
             });
         }
         $testI = 0;
@@ -51,40 +32,6 @@ $serv->on('request', function (Swoole\Http\Request $request, Swoole\Http\Respons
                 $testI++;
                 $testI++;
                 $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $testI++;
-                $response->write("test2222: $testI\n");
-//                $response->flush();
-//                usleep(1000);
             });
         }
 
